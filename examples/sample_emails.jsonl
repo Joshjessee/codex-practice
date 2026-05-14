@@ -1,0 +1,3 @@
+{"id":"1","from_address":"customer@example.com","subject":"Invoice question","body":"Hi, can you explain charge on invoice #441?"}
+{"id":"2","from_address":"lead@example.com","subject":"Need a quote","body":"We need monthly service for two locations. Budget around 2k."}
+{"id":"3","from_address":"junk@bad.tld","subject":"WIN BIG NOW","body":"Click this link to claim prize"}

@@ -1,0 +1,22 @@
+{
+  "business": {
+    "name": "Acme Services",
+    "tone": "friendly, concise, professional"
+  },
+  "settings": {
+    "allow_send": false,
+    "low_confidence_threshold": 0.85,
+    "high_priority_keywords": ["urgent", "outage", "payment failed"]
+  },
+  "categories": ["billing", "sales_lead", "support", "spam", "fyi"],
+  "routing": {
+    "billing": "billing@acme.example",
+    "sales_lead": "sales@acme.example",
+    "support": "support@acme.example",
+    "spam": "ops@acme.example",
+    "fyi": "ops@acme.example"
+  },
+  "escalation": {
+    "review_queue": "ops-review@acme.example"
+  }
+}
