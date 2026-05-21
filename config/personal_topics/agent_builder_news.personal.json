@@ -1,0 +1,56 @@
+{
+  "name": "agent_builder_news",
+  "description": "Personal agent-builder news digest blending Gmail newsletter signals with Google News.",
+  "mode": "personal",
+  "timezone": "America/Los_Angeles",
+  "sources": {
+    "gmail": {
+      "enabled": true,
+      "mode": "sender_priority",
+      "lookback_days": 7,
+      "senders": [
+        {
+          "label": "Every",
+          "match": ["every.to", "newsletter@every.to"]
+        },
+        {
+          "label": "a16z / Substack",
+          "match": ["a16z.com", "substack.com"]
+        },
+        {
+          "label": "SmarterX",
+          "match": ["smarterx.ai", "smarterx.com"]
+        },
+        {
+          "label": "OpenAI Updates",
+          "match": ["openai.com", "updates@openai.com", "noreply@openai.com"]
+        }
+      ]
+    },
+    "google_news": {
+      "enabled": true,
+      "edition": "US",
+      "language": "en-US",
+      "queries": [
+        "AI agents",
+        "agentic workflows",
+        "LLM orchestration",
+        "OpenAI updates",
+        "developer tools for AI agents"
+      ],
+      "max_articles": 25
+    }
+  },
+  "ranking": {
+    "gmail_weight": 0.65,
+    "google_news_weight": 0.35,
+    "deduplicate": true,
+    "prefer_freshness_hours": 36
+  },
+  "output": {
+    "max_items": 12,
+    "include_source": true,
+    "include_sender": true,
+    "format": "markdown"
+  }
+}
