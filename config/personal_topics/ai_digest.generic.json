@@ -1,0 +1,34 @@
+{
+  "name": "ai_digest",
+  "description": "Generic AI digest based only on broad Google News queries.",
+  "mode": "generic",
+  "timezone": "America/Los_Angeles",
+  "sources": {
+    "gmail": {
+      "enabled": false
+    },
+    "google_news": {
+      "enabled": true,
+      "edition": "US",
+      "language": "en-US",
+      "queries": [
+        "artificial intelligence",
+        "generative AI",
+        "large language models",
+        "AI startups",
+        "machine learning"
+      ],
+      "max_articles": 25
+    }
+  },
+  "ranking": {
+    "google_news_weight": 1.0,
+    "deduplicate": true,
+    "prefer_freshness_hours": 48
+  },
+  "output": {
+    "max_items": 12,
+    "include_source": true,
+    "format": "markdown"
+  }
+}
